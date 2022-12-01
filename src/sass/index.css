@@ -64,12 +64,34 @@
 }
 
 .booking-table-modal {
-  background-color: aquamarine;
   width: 712px;
   height: 522px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-field {
   display: flex;
   flex-direction: column;
+}
+
+placeholder {
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #808080;
+}
+
+.booking-table-modal-title {
+  font-family: "Times New Roman";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.15;
 }

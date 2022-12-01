@@ -1,39 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../sass/index.css" />
+  </head>
+  <body>
+    <form class="booking-table-modal">
+      <p class="booking-table-modal__title">Забронювати столик</p>
+      <div class="form-field">
+        <input type="text" name="username" placeholder="Ваше ім’я" />
+        <label> На кого забронювати столик? </label>
+      </div>
 
-<form class="booking-table-modal">
-  <div class="form-field">
-    
-    <label> <input type="text" name="username" placeholder="Ваше ім’я" />
-    На кого забронювати столик?
-  </label>
-  </div>
+      <div class="form-field">
+        <input
+          type="number"
+          name="number"
+          min="0"
+          max="150"
+          step="1"
+          value="1"
+        />
+        <label> Столик на яку кількість осіб? </label>
+      </div>
 
-<div class="form-field">
-    <label>
-  
-  <input type="number" name="number" min="0" max="150" step="1" value="1" />
-  Столик на яку кількість осіб?
-</label>
-</div>
+      <div class="form-field">
+        <input
+          type="tel"
+          id="tel"
+          name="phone_number"
+          placeholder="+38 (___) ___-__-__"
+        />
+        <label for="tel"> Номер телефону </label>
+      </div>
 
-
-  <div class="form-field">
-    <label>
-    
-    <input type="tel" name="phone_number" placeholder="+38 (___) ___-__-__"/>
-    Номер телефону
-  </label>
-  </div>
-
-  
-
-
-  <div class="form-field">
-    <label>
-
-    <input type="date" min="1920-01-01" max="2020-01-01" />
-    На яку дату бронювати?
-  </label>
-  </div>
-  <button type="submit">ОФОРМИТИ БРОНЮВАННЯ</button>
-</form>
-
+      <div class="form-field">
+        <input type="date" min="1920-01-01" max="2020-01-01"placeholder="Сьогодні" pattern="" />
+        <label> На яку дату бронювати? </label>
+      </div>
+      <button type="submit">ОФОРМИТИ БРОНЮВАННЯ</button>
+    </form>
+  </body>
+</html>
