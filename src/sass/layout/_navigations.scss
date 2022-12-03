@@ -17,42 +17,22 @@
 }
 
 .footer__nav::before {
-    @include respondTo('tritonus') {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 1px;
-        min-height: 240px;
-        background: rgba(122, 122, 122, 0.4);
-        filter: blur(0.5px);
-        left: -7px;
-        top: -40px;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1px;
+    background: rgba(122, 122, 122, 0.4);
+    filter: blur(0.5px);
+        @include respondTo('tritonus') {
+            min-height: 240px;
+            left: -8px;
+            top: -40px;
     }
-    
-    @include respondTo('diapente') {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 1px;
-        min-height: 304px;
-        background: rgba(122, 122, 122, 0.4);
-        filter: blur(0.5px);
-        left: -7px;
-        top: -80px;
-    }
-}
-.footer__nav::after {
-    @include respondTo('diapente') {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 1px;
-        min-height: 304px;
-        background: rgba(122, 122, 122, 0.4);
-        filter: blur(0.5px);
-        left: 230px;
-        top: -80px;
-    }
+        @include respondTo('diapente') {
+            min-height: 304px;
+            left: -8px;
+            top: -80px;
+        }
 }
 
 .footer__link {

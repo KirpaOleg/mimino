@@ -14,6 +14,20 @@
     }
 }
 
+.footer__soc-menu::before {
+    @include respondTo('diapente') {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1px;
+        min-height: 304px;
+        background: rgba(122, 122, 122, 0.4);
+        filter: blur(0.5px);
+        left: -8px;
+        top: -80px;
+    }
+}
+
 .footer__text {
     @extend %list;
 
