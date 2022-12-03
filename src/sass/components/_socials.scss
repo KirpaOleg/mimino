@@ -1,0 +1,55 @@
+.footer__soc-menu {
+    @extend %list;
+
+
+    @include respondTo('tritonus') {
+        display: flex;
+        gap: 21px;
+    }
+
+    @include respondTo('diapente') {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+}
+
+.footer__text {
+    @extend %list;
+
+    @include respondTo('tritonus') {
+        display: none;
+    }
+
+        @include respondTo('diapente') {
+        display: block;
+    }
+}
+
+.footer__soc-icon {
+    fill: transparentize($color: getColor('accent'), $amount: 0.3);
+}
+
+.footer__soc-link {
+    @extend %link;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respondTo('diapente') {
+        font-family: $text-font-stack;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: getColor('accent');
+    }
+}
+
+.footer__soc-item {
+    @include respondTo('diapente') {
+        padding: 7px 12px;
+        border: 0.5px solid getColor('accent');
+        border-radius: 2px;
+        min-width: 144px;
+    }
+}

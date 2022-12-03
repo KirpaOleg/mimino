@@ -1,5 +1,5 @@
 .footer {
-    background-color: #0E0C07;
+    background-color: #0e0c07;
 }
 
 .footer__container {
@@ -11,7 +11,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     
-        @media screen and (min-width: 1024px) {
+    @include respondTo('diapente') {
         min-height: 304px;
         padding-top: 80px;
         padding-bottom: 80px;
@@ -19,106 +19,8 @@
 }
 
 .footer__content {
-    @media screen and (min-width: 1024px) {
+    @include respondTo('diapente') {
         display: flex;
     }
 }
 
-.logo--footer {
-    @extend %link;
-    font-family: $logo-font;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 43px;
-    letter-spacing: 0.3em;
-    color: getColor('accent');
-        
-    @media screen and (min-width: 1024px) {
-        font-size: 64px;
-        line-height: 69px;;
-    }
-}
-
-.footer__nav {
-    @extend %list;
-
-    @media screen and (max-width: 1023px) {
-    margin-bottom: 32px;
-    }
-
-    @media screen and (min-width: 1024px) {
-        margin-right: 137px;
-    }
-
-    @media screen and (min-width: 1280px) {
-        margin-right: 199px;
-    }
-
-}
-
-.footer__soc-menu {
-    @extend %list;
-    
-    @media screen and (max-width: 1023px) {
-        display: flex;
-        gap: 21px;
-        }
-    
-    @media screen and (min-width: 1024px) {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 12px;
-}
-}
-
-.footer__text {
-    @extend %list;
-        @media screen and (max-width: 1023px) {
-            display: none;
-        }
-    
-        @media screen and (min-width: 1024px) {
-            display: block;
-        }
-}
-
-.footer__link {
-    @extend %link;
-    font-family: $text-font-stack;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: getColor('accent');
-}
-
-.footer__item:not(:last-child) {
-    margin-bottom: 16px;
-}
-
-.footer__soc-icon {
-    fill: transparentize($color: getColor('accent'), $amount: 0.3);
-}
-
-.footer__soc-link {
-    @extend %link;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @media screen and (min-width: 1024px) {
-        font-family: $text-font-stack;
-        font-size: 16px;
-        line-height: 20px;
-        letter-spacing: 0.02em;
-        color: getColor('accent');
-    }
-}
-
-.footer__soc-item {
-    @media screen and (min-width: 1024px) {
-        padding: 7px 12px;
-        border: 0.5px solid getColor('accent');
-        border-radius: 2px;
-        min-width: 144px;
-    }
-}
