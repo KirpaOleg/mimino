@@ -3,42 +3,39 @@
 }
 
 .footer__container {
-    min-height: 240px;
     display: flex;
+    min-height: 240px;
+    justify-content: space-around;
     align-items: center;
+    
     padding-top: 40px;
     padding-bottom: 40px;
     
-    @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1024px) {
         min-height: 304px;
         padding-top: 80px;
         padding-bottom: 80px;
-        justify-content: space-around;
     }
 }
 
 .footer__content {
-    @media screen and (max-width: 1023px) {
-        margin-right: 15px;
-    }
-
     @media screen and (min-width: 1024px) {
         display: flex;
     }
 }
 
 .logo--footer {
+    @extend %link;
     font-family: $logo-font;
     font-weight: 700;
     font-size: 40px;
     line-height: 43px;
     letter-spacing: 0.3em;
-    color: #F3C653;
-    @extend %link;
-
-    @media screen and (max-width: 1023px) {
-        margin-right: 85px;
-        margin-left: auto;
+    color: getColor('accent');
+        
+    @media screen and (min-width: 1024px) {
+        font-size: 64px;
+        line-height: 69px;;
     }
 }
 
@@ -61,28 +58,28 @@
 
 .footer__soc-menu {
     @extend %list;
-    gap: 21px;
     
     @media screen and (max-width: 1023px) {
+        display: flex;
+        gap: 21px;
+        }
+    
+    @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+}
+}
+
+.footer__text {
+    @extend %list;
+        @media screen and (max-width: 1023px) {
             display: none;
         }
     
         @media screen and (min-width: 1024px) {
             display: block;
         }
-}
-
-.footer__soc-menu--telefon {
-    @extend %list;
-    display: flex;
-    gap: 21px;
-
-    @media screen and (max-width: 1023px) {
-        display: flex;
-    }
-    @media screen and (min-width: 1024px) {
-        display: none;
-    }
 }
 
 .footer__link {
@@ -92,7 +89,7 @@
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #F3C653;
+    color: getColor('accent');
 }
 
 .footer__item:not(:last-child) {
@@ -100,8 +97,7 @@
 }
 
 .footer__soc-icon {
-    fill: rgba(243, 198, 83, 0.7);
-
+    fill: transparentize($color: getColor('accent'), $amount: 0.3);
 }
 
 .footer__soc-link {
@@ -114,21 +110,15 @@
         font-size: 16px;
         line-height: 20px;
         letter-spacing: 0.02em;
-        color: #F3C653;
+        color: getColor('accent');
     }
 }
 
 .footer__soc-item {
     @media screen and (min-width: 1024px) {
-        padding: 10px 12px;
-        border: 0.5px solid #F3C653;
+        padding: 7px 12px;
+        border: 0.5px solid getColor('accent');
         border-radius: 2px;
         min-width: 144px;
-    }
-}
-
-.footer__soc-item:not(:last-child) {
-    @media screen and (min-width: 1024px) {
-        margin-bottom: 12px;
     }
 }
