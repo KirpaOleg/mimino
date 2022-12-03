@@ -1,6 +1,6 @@
 .footer__soc-menu {
     @extend %list;
-
+    position: relative;
 
     @include respondTo('tritonus') {
         display: flex;
