@@ -24,11 +24,26 @@
   &--footer {
     font-size: 40px;
     color: getColor('accent');
+    text-transform: uppercase;
 
     @include respondTo('tritonus') {
-      margin-right: 85px;
+      margin-right: auto;
       margin-left: auto;
-  }
+    }
+
+    @include respondTo('diapente') {
+      font-size: 64px;
+      line-height: 69px;
+      margin-left: 107px;
+      margin-right: calc(163px - 19px);
+      }
+    
+
+    @include respondTo('diapason') {
+      margin-left: 131px;
+      margin-right: calc(231px - 19px);
+    }
+  
 
   }
 }

@@ -1,3 +1,7 @@
+.socials__icon {
+  fill: transparentize($color: getColor('accent'), $amount: 0.3);
+}
+
 .socials-header {
   display: none;
   @extend %list;
@@ -9,5 +13,54 @@
   &__icon {
     @extend %icon;
     color: mix(transparent, getColor('accent'), 30%);
+  }
+}
+
+.socials--footer {
+  @extend %list;
+
+  @include respondTo('tritonus') {
+    display: flex;
+    gap: 21px;
+  }
+
+  @include respondTo('diapente') {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+}
+
+.socials__text {
+  @include respondTo('tritonus') {
+    display: none;
+  }
+
+  @include respondTo('diapente') {
+    display: block;
+  }
+}
+
+.socials__link {
+  @extend %link;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @include respondTo('diapente') {
+    font-family: $text-font-stack;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: getColor('accent');
+  }
+}
+
+.socials__item {
+  @include respondTo('diapente') {
+    padding: 10px 12px;
+    border: 0.5px solid getColor('accent');
+    border-radius: 2px;
+    min-width: 144px;
   }
 }

@@ -1,0 +1,30 @@
+.navigations__link {
+    @extend %link;
+    font-family: $text-font-stack;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: getColor('accent');
+}
+
+.navigations--footer {
+    @extend %list;
+
+    @include respondTo('tritonus') {
+        margin-bottom: 32px;
+    }
+
+    @include respondTo('diapente') {
+        margin-right: 137px;
+    }
+
+    @include respondTo('diapason') {
+        margin-right: 199px;
+    }
+
+}
+
+.navigations__item--footer:not(:last-child) {
+    margin-bottom: 16px;
+}
