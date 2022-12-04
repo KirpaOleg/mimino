@@ -28,7 +28,11 @@
     @include respondTo('tritonus') {
       margin-right: 85px;
       margin-left: auto;
-  }
+    }
+
+    @include respondTo('diapente') {
+      font-size: 64px;
+    }
 
   }
 }

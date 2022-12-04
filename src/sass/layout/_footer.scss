@@ -1,9 +1,9 @@
 .footer {
-    max-width: 414px;
-    margin-left: auto;
-    margin-right: auto;
+    // max-width: 414px;
+    // margin-left: auto;
+    // margin-right: auto;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
     background-image: linear-gradient(
         to right,
         #0E0C07 264px,
@@ -13,7 +13,7 @@
     );
 
     @include respondTo('diapente') {
-        max-width: 1024px;
+        // max-width: 1024px;
         padding-top: 80px;
         padding-bottom: 80px;
         background-image: linear-gradient(
@@ -30,7 +30,7 @@
     }
 
     @include respondTo('diapason') {
-        max-width: 1280px;
+        // max-width: 1280px;
         background-image: linear-gradient(
             to right,
             #0E0C07 641px,
@@ -43,21 +43,28 @@
             #0E0C07 942px
         )
     }
+
+    &__logo {
+
+        @include respondTo('diapente') {
+            font-size: 64px;
+        }
+    }
 }
 
 .footer__container {
     display: flex;
     align-items: center;
   
-    @media screen and (min-width: 1024px) {
+    @include respondTo('diapente') {
         justify-content: space-around;
     }
 }
 
 .footer__content {
-    @media screen and (max-width: 1023px) {
-        margin-right: 15px;
-    }
+    // @media screen and (max-width: 1023px) {
+    //     margin-right: 15px;
+    // }
 
     @media screen and (min-width: 1024px) {
         display: flex;
@@ -67,17 +74,17 @@
 .footer__nav {
     @extend %list;
 
-    @media screen and (max-width: 1023px) {
-    margin-bottom: 32px;
-    }
+    // @media screen and (max-width: 1023px) {
+    // margin-bottom: 32px;
+    // }
 
-    @media screen and (min-width: 1024px) {
-        margin-right: 137px;
-    }
+    // @media screen and (min-width: 1024px) {
+    //     margin-right: 137px;
+    // }
 
-    @media screen and (min-width: 1280px) {
-        margin-right: 199px;
-    }
+    // @media screen and (min-width: 1280px) {
+    //     margin-right: 199px;
+    // }
 
 }
 
@@ -85,24 +92,25 @@
     @extend %list;
     gap: 21px;
     
-    @media screen and (max-width: 1023px) {
-            display: none;
-        }
+    @include respondTo('tritonus') {
+        display: none;
+    }
     
-        @media screen and (min-width: 1024px) {
-            display: block;
-        }
+    @include respondTo('diapente') {
+        display: block;
+    }
 }
 
 .footer__soc-menu--telefon {
     @extend %list;
     display: flex;
     gap: 21px;
+    margin-top: 33px;
 
-    @media screen and (max-width: 1023px) {
+    @include respondTo('tritonus') {
         display: flex;
     }
-    @media screen and (min-width: 1024px) {
+    @include respondTo('diapente') {
         display: none;
     }
 }
