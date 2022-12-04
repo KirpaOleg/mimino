@@ -83,29 +83,18 @@
 
 .footer__soc-menu {
     @extend %list;
-    gap: 21px;
-    
-    @media screen and (max-width: 1023px) {
-            display: none;
-        }
-    
-        @media screen and (min-width: 1024px) {
-            display: block;
-        }
-}
-
-.footer__soc-menu--telefon {
-    @extend %list;
     display: flex;
     gap: 21px;
-
-    @media screen and (max-width: 1023px) {
-        display: flex;
-    }
-    @media screen and (min-width: 1024px) {
-        display: none;
-    }
 }
+
+// .footer__text {
+//        @media screen and (max-width: 1023px) {
+//         display: block;
+//     }
+//     @media screen and (min-width: 1024px) {
+//         display: none;
+//     }
+// }
 
 .footer__link {
     @extend %link;
