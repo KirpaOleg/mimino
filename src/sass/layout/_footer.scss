@@ -1,7 +1,5 @@
 .footer {
-    // max-width: 414px;
-    // margin-left: auto;
-    // margin-right: auto;
+
     padding-top: 40px;
     padding-bottom: 41px;
     background-image: linear-gradient(
@@ -13,7 +11,6 @@
     );
 
     @include respondTo('diapente') {
-        // max-width: 1024px;
         padding-top: 80px;
         padding-bottom: 80px;
         background-image: linear-gradient(
@@ -30,7 +27,6 @@
     }
 
     @include respondTo('diapason') {
-        // max-width: 1280px;
         background-image: linear-gradient(
             to right,
             #0E0C07 641px,
@@ -43,122 +39,100 @@
             #0E0C07 942px
         )
     }
-
-    &__logo {
-
+    
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__content {
+    
+        @media screen and (min-width: 1024px) {
+            display: flex;
+        }
+    }
+    
+    &__nav {
+        @extend %list;
+    }
+    
+    &__soc-menu {
+        @extend %list;
+        gap: 21px;
+    
+        @include respondTo('tritonus') {
+            display: none;
+        }
+    
         @include respondTo('diapente') {
-            font-size: 64px;
+            display: block;
+            margin-left: 135px;
+        }
+    
+        @include respondTo('diapason') {
+            margin-left: 199px;
+        }
+    }
+    
+    &__soc-menu--telefon {
+        @extend %list;
+        display: flex;
+        gap: 21px;
+        margin-top: 33px;
+    
+        @include respondTo('tritonus') {
+            display: flex;
+        }
+    
+        @include respondTo('diapente') {
+            display: none;
+        }
+    }
+    
+    &__link {
+        @extend %link;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: getColor('accent');
+    }
+    
+    &__item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+    
+    &__soc-icon {
+        fill: getColor('footer-icon');
+    }
+    
+    &__soc-link {
+        @extend %link;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        @include respondTo('diapente') {
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.02em;
+            color: getColor('accent');
+        }
+    }
+    
+    &__soc-item {
+        @include respondTo('diapente') {
+            padding: 10px 12px;
+            border: 0.5px solid getColor('accent');
+            border-radius: 2px;
+            min-width: 144px;
+        }
+    }
+    
+    &__soc-item:not(:last-child) {
+        @include respondTo('diapente') {
+            margin-bottom: 12px;
         }
     }
 }
 
-.footer__container {
-    display: flex;
-    align-items: center;
-  
-    @include respondTo('diapente') {
-        justify-content: space-around;
-    }
-}
-
-.footer__content {
-    // @media screen and (max-width: 1023px) {
-    //     margin-right: 15px;
-    // }
-
-    @media screen and (min-width: 1024px) {
-        display: flex;
-    }
-}
-
-.footer__nav {
-    @extend %list;
-
-    // @media screen and (max-width: 1023px) {
-    // margin-bottom: 32px;
-    // }
-
-    // @media screen and (min-width: 1024px) {
-    //     margin-right: 137px;
-    // }
-
-    // @media screen and (min-width: 1280px) {
-    //     margin-right: 199px;
-    // }
-
-}
-
-.footer__soc-menu {
-    @extend %list;
-    gap: 21px;
-    
-    @include respondTo('tritonus') {
-        display: none;
-    }
-    
-    @include respondTo('diapente') {
-        display: block;
-    }
-}
-
-.footer__soc-menu--telefon {
-    @extend %list;
-    display: flex;
-    gap: 21px;
-    margin-top: 33px;
-
-    @include respondTo('tritonus') {
-        display: flex;
-    }
-    @include respondTo('diapente') {
-        display: none;
-    }
-}
-
-.footer__link {
-    @extend %link;
-    font-family: $text-font-stack;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: #F3C653;
-}
-
-.footer__item:not(:last-child) {
-    margin-bottom: 16px;
-}
-
-.footer__soc-icon {
-    fill: rgba(243, 198, 83, 0.7);
-
-}
-
-.footer__soc-link {
-    @extend %link;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @media screen and (min-width: 1024px) {
-        font-family: $text-font-stack;
-        font-size: 16px;
-        line-height: 20px;
-        letter-spacing: 0.02em;
-        color: #F3C653;
-    }
-}
-
-.footer__soc-item {
-    @media screen and (min-width: 1024px) {
-        padding: 10px 12px;
-        border: 0.5px solid #F3C653;
-        border-radius: 2px;
-        min-width: 144px;
-    }
-}
-
-.footer__soc-item:not(:last-child) {
-    @media screen and (min-width: 1024px) {
-        margin-bottom: 12px;
-    }
-}
