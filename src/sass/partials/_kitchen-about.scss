@@ -13,34 +13,35 @@
     }
 }
 
-.container__kitchen-about {
-    display: block;
-        color: mix(getColor('primary-inversed'), getColor('primary'), 37.3%);
-        display: block;
-        position: relative;
-        padding: 0 15px;
-        margin-left: auto;
-        margin-right: auto;
-        font-family: $text-font-stack;
-        @extend %list;
+// .container__kitchen-about {
+//     display: block;
+//         color: mix(getColor('primary-inversed'), getColor('primary'), 37.3%);
+//         display: block;
+//         position: relative;
+//         padding: 0 15px;
+//         margin-left: auto;
+//         margin-right: auto;
+//         font-family: $text-font-stack;
+//         @extend %list;
     
-        @include respondTo('tritonus') {
-            max-width: 414px;
-        }
+//         @include respondTo('tritonus') {
+//             max-width: 414px;
+//         }
     
-        @include respondTo('diapente') {
-            padding: 0 47px;
-            max-width: 1024px;
-        }
+//         @include respondTo('diapente') {
+//             padding: 0 47px;
+//             max-width: 1024px;
+//         }
     
-        @include respondTo('diapason') {
-            padding: 0 85px;
-            max-width: 1280px;
-        }
-}
+//         @include respondTo('diapason') {
+//             padding: 0 85px;
+//             max-width: 1280px;
+//         }
+// }
 
 .kitchen-about__title {
     margin-top: 0;
+    font-weight: 400;
         margin-bottom: 12px;
         color: mix(getColor('primary-inversed'), getColor('primary'), 78%);
     
@@ -91,7 +92,7 @@
     @extend %marginPaddingReset;
         display: block;
         font-family: $text-font-stack;
-        line-height: 1.2;
+        line-height: 1.25;
         margin-bottom: 28px;
         font-weight: 600;
         margin-top: 12px;
@@ -119,10 +120,11 @@
 
 .kitchen-about__article-img-one {
     display: block;
-        margin-left: 155;
+        margin-left: 155px;
         box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
         border-radius: 2px;
         overflow: hidden;
+        
     
         @include respondTo('unisonus') {
             max-width: 244px;
@@ -138,42 +140,42 @@
         @include respondTo('diapason') {
             right: 95px;
             max-width: 460px;
+            right: 180px;
         }
 }
 
 .kitchen-about__article-img-two {
     display: flex;
-        justify-content: end;
+        justify-content: start;
         align-items: center;
 }
 
 .kitchen-about__food {
     display: flex;
-        margin-right: 15px;
         box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
         border-radius: 2px;
         overflow: hidden;
     
-        @include respondTo('unisonus') {
+        @include respondTo('tritonus') {
             max-width: 200px;
+            margin-right: 20px;
         }
     
         @include respondTo('diapente') {
             max-width: 350px;
-            margin-right: auto;
+            margin-right: 48px;
         }
     
         @include respondTo('diapason') {
             max-width: 460px;
-            margin-right: auto;
+            margin-right: 32px;
+           
         }
 }
 
 .kitchen-about__text-food {
     display: flex;
-        justify-content: end;
         align-items: center;
-        width: 163px;
         font-style: normal;
         font-weight: 600;
         font-size: 12px;
@@ -185,20 +187,22 @@
         @include respondTo('unisonus') {
             width: 163px;
             font-size: 12px;
-            margin-left: 21px;
         }
     
         @include respondTo('diapente') {
             font-size: 16px;
             width: 312px;
-            margin-left: 48px;
-            margin-right: 267px;
+
         }
     
         @include respondTo('diapason') {
             width: 311px;
             margin-bottom: 121px;
-            margin-left: 346px;
-            margin-left: 32px;
         }
+}
+
+.kitchen-about__arrow {
+    display: flex;
+    justify-content: end;
+    gap: 32px;
 }

@@ -152,3 +152,20 @@
 .swiper-wrapper {
  @extend %list;
 }
+
+.swiper--kitchen {
+  overflow: visible;
+  width: calc(245px * 2 + 24px);
+  transform: translateX(701px);
+
+  @include respondTo('diapente') {
+    transform: translateX(93px);
+    width: calc(194px * 2 + 40px);
+  }
+
+  @include respondTo('diapason') {
+    transform: translateX(130px);
+    width: calc(245px * 2 + 40px);
+  }
+}
+
