@@ -52,6 +52,7 @@
     transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 
     @include respondTo('diapente') {
+        width: 712px;
         max-width: 712px;
         padding: 60px 60px;
     }
