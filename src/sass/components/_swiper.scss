@@ -148,3 +148,7 @@
   opacity: 1;
   background-image: url('./../images/swiper/arrow-left-disabled.svg');
 }
+
+.swiper-wrapper {
+ @extend %list;
+}
