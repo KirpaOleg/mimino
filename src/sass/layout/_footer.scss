@@ -1,5 +1,4 @@
 .footer {
-
     padding-top: 40px;
     padding-bottom: 41px;
     background-image: linear-gradient(
@@ -47,7 +46,7 @@
     
     &__content {
     
-        @media screen and (min-width: 1024px) {
+        @include respondTo('diapente') {
             display: flex;
         }
     }
