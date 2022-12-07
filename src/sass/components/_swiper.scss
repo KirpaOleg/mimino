@@ -109,14 +109,12 @@
   }
 }
 
-
-
 .swiper-slide.swiper-slide-prev,
 .swiper-slide.swiper-slide-active {
   visibility: visible;
 }
 
-//ПЕРЕВИЗНАЧЕНІ СТИЛІ ДЛЯ СТОРІНКИ HOME СЕКЦІЯ HOTEL-DETAILS!!!!!! 
+//ПЕРЕВИЗНАЧЕНІ СТИЛІ ДЛЯ СТОРІНКИ HOME СЕКЦІЯ HOTEL-DETAILS!!!!!!
 .home-details__swiper-slide.swiper-slide-prev {
   width: 162px !important;
 }
@@ -210,5 +208,5 @@
 
 .swiper-button-disabled.swiper-button-prev {
   opacity: 1;
-  background-image: url('./../images/swiper/arrow-left-disabled.svg');
+  background-image: url('../images/swiper/arrow-left-disabled.svg');
 }
