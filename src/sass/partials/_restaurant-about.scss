@@ -4,8 +4,13 @@
 
 .restaurant-about__tagline {
   margin-bottom: 16px;
-  margin-right: 209px;
-  width: 100%;
+
+  @include respondTo('diapente') {
+    margin-top: 120px;
+    margin-left: 47px;
+    margin-bottom: 4px;
+    margin-right: 161px;
+  }
 }
 
 .restaurant-about__brand {
@@ -18,7 +23,9 @@
 
   @include respondTo('diapente') {
     margin-top: 0;
+    margin-left: 47px;
     margin-bottom: 16px;
+    margin-right: 161px;
   }
 
   @include respondTo('diapason') {
@@ -54,12 +61,10 @@
   margin-bottom: 28px;
 
   @include respondTo('diapente') {
-    width: 439px;
     margin-bottom: 0px;
   }
 
   @include respondTo('diapason') {
-    width: 518px;
   }
 }
 
@@ -71,19 +76,16 @@
   overflow: hidden;
 
   @include respondTo('unisonus') {
-    width: 244px;
   }
 
   @include respondTo('diapente') {
-    max-width: 400px;
     position: absolute;
-    top: -32px;
+    top: 155px;
     right: 65px;
   }
 
   @include respondTo('diapason') {
     right: 95px;
-    max-width: 460px;
   }
 }
 
@@ -109,50 +111,42 @@
 
 .restaurant-about__img-lobby {
   display: flex;
+  margin-top: 32px;
   border-radius: 2px;
   overflow: hidden;
 
-  @include respondTo('unisonus') {
-    max-width: 200px;
-  }
-
   @include respondTo('diapente') {
-    max-width: 350px;
     margin-right: auto;
     margin-top: 142px;
   }
 
   @include respondTo('diapason') {
-    max-width: 460px;
     margin-right: auto;
   }
 }
 
 .restaurant-about__text-lobby {
   font-family: $text-font-stack;
-  color: #c79002;
+  color: getColor('accent-darker');
   font-weight: 600;
-  font-size: 13px;
-  margin-top: 102px;
+  font-size: 12px;
   line-height: 1.21;
   width: 100%;
-  margin-left: 15px;
+  display: flex;
+  align-items: center;
   letter-spacing: 0.02em;
 
   @include respondTo('unisonus') {
-    width: 163px;
     margin-left: 20px;
   }
 
   @include respondTo('diapente') {
-    width: 312px;
     margin-left: 48px;
     margin-right: 267px;
-    margin-top: 180px;
+    margin-top: 102px;
   }
 
   @include respondTo('diapason') {
-    width: 311px;
     margin-bottom: 121px;
     margin-left: 346px;
     margin-left: 32px;
@@ -175,11 +169,55 @@
   display: block;
 }
 
-.swiper-slide {
+// .swiper-slide {
+//   display: flex;
+//   width: 100%;
+// }
+
+.swiper-button-prev {
   display: flex;
-  width: 100%;
 }
 
-// .img-swiper {
-//   width: 245px;
-// }
+.restaurant-about .vertical-lines {
+  z-index: 1;
+}
+.lines {
+  position: absolute;
+  display: block;
+  left: 33.33%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: rgba(122, 122, 122, 0.4);
+  z-index: -1;
+  .lines::after {
+    position: absolute;
+    content: '';
+    top: 0px;
+    right: -33vw;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(122, 122, 122, 0.4);
+  }
+
+  @include respondTo('diapente') {
+    left: 50%;
+    transform: translateX(-50%);
+    .lines::before,
+    .lines::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(122, 122, 122, 0.4);
+    }
+    .lines::before {
+      left: -23vw;
+    }
+    .lines::after {
+      right: -23vw;
+    }
+  }
+}
