@@ -6,6 +6,7 @@
   margin-bottom: 16px;
 
   @include respondTo('diapente') {
+    width: 100%;
     margin-top: 120px;
     margin-left: 47px;
     margin-bottom: 4px;
@@ -62,6 +63,7 @@
 
   @include respondTo('diapente') {
     margin-bottom: 0px;
+    margin-left: 47px;
   }
 
   @include respondTo('diapason') {
@@ -169,55 +171,6 @@
   display: block;
 }
 
-// .swiper-slide {
-//   display: flex;
-//   width: 100%;
-// }
-
 .swiper-button-prev {
   display: flex;
-}
-
-.restaurant-about .vertical-lines {
-  z-index: 1;
-}
-.lines {
-  position: absolute;
-  display: block;
-  left: 33.33%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 100%;
-  background-color: rgba(122, 122, 122, 0.4);
-  z-index: -1;
-  .lines::after {
-    position: absolute;
-    content: '';
-    top: 0px;
-    right: -33vw;
-    width: 1px;
-    height: 100%;
-    background-color: rgba(122, 122, 122, 0.4);
-  }
-
-  @include respondTo('diapente') {
-    left: 50%;
-    transform: translateX(-50%);
-    .lines::before,
-    .lines::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      width: 1px;
-      height: 100%;
-      background-color: rgba(122, 122, 122, 0.4);
-    }
-    .lines::before {
-      left: -23vw;
-    }
-    .lines::after {
-      right: -23vw;
-    }
-  }
 }
