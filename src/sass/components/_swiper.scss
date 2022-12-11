@@ -32,8 +32,12 @@
 
 .swiper {
   overflow: visible;
-  width: 404px;
+  width: calc(100vw - 20px);
   transform: translateX(34px);
+  @include respondTo('unisonus') {
+    width: 404px;
+    transform: translateX(34px);
+  }
   @include respondTo('diapente') {
     width: 428px;
     transform: translateX(0px);
@@ -43,12 +47,15 @@
     transform: translateX(0px);
   }
   &--large {
-    width: 506px;
+    width: calc(100vw - 20px);
+    @include respondTo('unisonus') {
+      width: 506px;
+    }
     @include respondTo('diapente') {
-      width: 404px;
+      width: 428px;
     }
     @include respondTo('diapason') {
-      width: 506px;
+      width: 530px;
     }
   }
   &-slide {
@@ -161,8 +168,11 @@
     left: unset;
   }
   .wrapper-swiper--right & {
-    left: 60px;
-    right: unset;
+    left: unset;
+    right: 32px;
+    @include respondTo('diapente') {
+      right: 56px;
+    }
   }
 }
 

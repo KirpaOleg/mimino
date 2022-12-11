@@ -8,9 +8,12 @@
   &--header {
     display: block;
     color: getColor('primary-inversed');
-    font-size: 36px;
-    // мінус 10пікс для компенсації різниці ширини лого, що зумовлена шириною останної літери
-    margin-right: calc(52px - 10px);
+    font-size: 18px;
+    margin-right: 10px;
+    @include respondTo('unisonus') {
+      font-size: 36px;
+      margin-right: calc(52px - 10px);
+    }
 
     @include respondTo('diapente') {
       font-size: 40px;
@@ -28,7 +31,6 @@
     @include respondTo('diapente') {
       margin-left: auto;
       font-size: 64px;
-  }
-
+    }
   }
 }
