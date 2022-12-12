@@ -16,6 +16,10 @@
   overflow: hidden;
   padding: 60px;
   margin-right: -15px;
+
+  @include respondTo('pre-unisonus') {
+    margin-left: calc(100vw - 416px);
+  }
   @include respondTo('diapente') {
     margin-left: -60px;
     margin-right: 0;
