@@ -20,10 +20,14 @@ function swiperSlider() {
         breakpoints: {
           //   when window width is >= 320px
           320: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          416: {
             slidesPerView: 2,
             spaceBetween: 16,
           },
-          // when window width is >= 480px
+          // when window width is >= 1024px
           1024: {
             slidesPerView: 2,
             spaceBetween: 40,
